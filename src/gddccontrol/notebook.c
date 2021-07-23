@@ -669,6 +669,7 @@ void create_monitor_manager(struct monitorlist* monitor)
 	
 	monitor_manager = table;
 	
+#if 0
 	if (mon->fallback) {
 		/* Put a big warning. */
 		gchar* message;
@@ -698,7 +699,9 @@ void create_monitor_manager(struct monitorlist* monitor)
 		g_free(message);
 		g_free(tmp);
 	}
-	else {
+	else 
+#endif 
+        {
 		set_message("");
 		gtk_widget_show(monitor_manager);
 	}
